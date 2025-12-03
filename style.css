@@ -1,0 +1,208 @@
+/* Fondo oscuro tecnológico */
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #ed8dd8, #81bbde);
+  font-family: Arial, sans-serif;
+}
+
+/* Títulos centrados */
+h2 {
+  text-align: center;
+  color: #00eaff;
+  margin-bottom: 20px;
+}
+
+/* Foto centrada */
+#sobre-mi {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Cuadro de foto */
+.tarjeta-foto {
+  width: 150px;
+  margin: 0 auto;
+  background: rgba(0, 234, 255, 0.08);
+  border: 2px solid #00eaff;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 0 15px #00eaff80;
+}
+
+.tarjeta-foto img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #00eaff;
+}
+
+/* Descripción: caja aparte */
+.tarjeta-info {
+  width: 85%;
+  max-width: 450px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,255,255,0.3);
+  margin: 20px auto;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Todas las secciones centradas */
+section {
+  margin-top: 70px;
+}
+
+/* CONTENEDOR DE PROYECTOS: fila horizontal con scroll */
+.projects,
+.projects-row {
+  display: flex;
+  justify-content: center; /* Centra las tarjetas */
+  gap: 25px;
+  flex-wrap: wrap; /* HACE QUE SE ALINEEN COMO CUADRITO */
+  padding: 20px 0;
+}
+
+.projects::-webkit-scrollbar,
+.projects-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects::-webkit-scrollbar-thumb,
+.projects-row::-webkit-scrollbar-thumb {
+  background: rgba(0,234,255,0.5);
+  border-radius: 4px;
+}
+
+.projects::-webkit-scrollbar-track,
+.projects-row::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+}
+
+/* TARJETAS DE PROYECTO */
+.project-card {
+  flex: 0 0 auto;
+  width: 220px;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid #00eaff;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0px 0px 12px #00eaff60;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card:hover {
+  transform: scale(1.06);
+}
+
+/* IMAGEN DE PROYECTO */
+.project-card img,
+.estrella-preview {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+/* TITULOS Y DESCRIPCIÓN */
+.project-card h3 {
+  margin: 10px 0 5px;
+  color: #00eaff;
+  font-size: 16px;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* BOTONES DE PROYECTO */
+.boton-proyecto {
+  display: inline-block;
+  background: #0077cc;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.boton-proyecto:hover {
+  background: #0099ff;
+}
+
+/* BOTÓN GENERAL */
+.boton-link {
+  display: inline-block;
+  background: #00aaff;
+  color: white;
+  padding: 10px 18px;
+  margin-top: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* CONTACTO CENTRADO */
+.lista-contacto {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.lista-contacto li {
+  margin: 10px 0;
+}
+
+/* CV CENTRADO */
+#cv {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.boton-cv {
+  display: inline-block;
+  margin-top: 12px;
+  background: #00aaff;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.boton-cv:hover {
+  background: #0099ff;
+}
+
+/* PREVIEW DE LA ESTRELLA */
+.estrella-preview {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: white;
+  padding: 10px;
+}
+
+@media (max-width: 900px) {
+  .projects-row {
+      justify-content: center;
+      gap: 20px;
+  }
+}
