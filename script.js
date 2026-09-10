@@ -1,14 +1,25 @@
-// Archivo de prueba para análisis estático con Snyk Code
-function simularCargaCyberCompra() {
-    let registrosTransacciones = [];
-    
-    // Simulación de un bucle de espera asíncrono defectuoso que genera consumo masivo de memoria
-    while (true) {
-        let datosTemporales = new Array(1000000).fill("Transaccion pendiente de pago");
-        registrosTransacciones.push(datosTemporales);
-        
-        console.log("Procesando transacciones concurrentes...");
-    }
+// Archivo de prueba para análisis estático con Snyk Code - Vulnerabilidad de Inyección de Comandos
+const { exec } = require('child_process');
+
+function procesarPagoCyberCompra(datosUsuario) {
+    // VULNERABILIDAD CRÍTICA: Se concatena directamente la entrada del usuario en un comando del sistema.
+    const comando = 'echo Procesando pago para: ' + datosUsuario;
+
+    console.log("Iniciando operación de pago...");
+
+    // Snyk detectará que el parámetro 'datosUsuario' contamina el comando ejecutado.
+    exec(comando, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Error al ejecutar comando: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.error(`stderr: ${stderr}`);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+    });
 }
 
-simularCargaCyberCompra();
+// Simulación de llamada con datos no sanitizados
+procesarPagoCyberCompra("Juan Perez; cat /etc/passwd");
