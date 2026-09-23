@@ -1,208 +1,761 @@
-/* Fondo oscuro tecnológico */
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  background: linear-gradient(to bottom, #ed8dd8, #81bbde);
-  font-family: Arial, sans-serif;
+    font-family: "Inter", sans-serif;
+    background: #faf9ff;
+    color: #20202a;
+    line-height: 1.6;
 }
 
-/* Títulos centrados */
-h2 {
-  text-align: center;
-  color: #00eaff;
-  margin-bottom: 20px;
+img {
+    max-width: 100%;
+    display: block;
 }
 
-/* Foto centrada */
-#sobre-mi {
-  text-align: center;
-  margin-top: 50px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Cuadro de foto */
-.tarjeta-foto {
-  width: 150px;
-  margin: 0 auto;
-  background: rgba(0, 234, 255, 0.08);
-  border: 2px solid #00eaff;
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 0 15px #00eaff80;
+
+/* ==================================================
+   VARIABLES
+================================================== */
+
+:root {
+
+    --primary: #7c3aed;
+    --primary-dark: #5b21b6;
+
+    --pink: #ec4899;
+    --purple-light: #ede9fe;
+
+    --dark: #17151f;
+    --text: #55515f;
+    --white: #ffffff;
+
+    --background: #faf9ff;
+    --card: #ffffff;
+
+    --border: #ece9f3;
+
+    --shadow:
+        0 20px 50px rgba(61, 34, 96, 0.10);
+
+    --radius: 24px;
+
+    --container: 1120px;
 }
 
-.tarjeta-foto img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 3px solid #00eaff;
+
+/* ==================================================
+   GENERAL
+================================================== */
+
+.container {
+    width: min(90%, var(--container));
+    margin: 0 auto;
 }
 
-/* Descripción: caja aparte */
-.tarjeta-info {
-  width: 85%;
-  max-width: 450px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(0,255,255,0.3);
-  margin: 20px auto;
-  padding: 18px;
-  border-radius: 12px;
-  text-align: center;
+.section {
+    padding: 110px 0;
 }
 
-/* Todas las secciones centradas */
-section {
-  margin-top: 70px;
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 55px;
+    text-align: center;
 }
 
-/* CONTENEDOR DE PROYECTOS: fila horizontal con scroll */
-.projects,
-.projects-row {
-  display: flex;
-  justify-content: center; /* Centra las tarjetas */
-  gap: 25px;
-  flex-wrap: wrap; /* HACE QUE SE ALINEEN COMO CUADRITO */
-  padding: 20px 0;
+.section-heading span {
+    display: inline-block;
+
+    color: var(--primary);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
 }
 
-.projects::-webkit-scrollbar,
-.projects-row::-webkit-scrollbar {
-  height: 8px;
+.section-heading h2 {
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.15;
+
+    margin-bottom: 15px;
 }
 
-.projects::-webkit-scrollbar-thumb,
-.projects-row::-webkit-scrollbar-thumb {
-  background: rgba(0,234,255,0.5);
-  border-radius: 4px;
+.section-heading p {
+    color: var(--text);
 }
 
-.projects::-webkit-scrollbar-track,
-.projects-row::-webkit-scrollbar-track {
-  background: rgba(255,255,255,0.05);
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(250, 249, 255, 0.88);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(236, 233, 243, 0.8);
 }
 
-/* TARJETAS DE PROYECTO */
+.nav-container {
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav a {
+    position: relative;
+
+    color: #514d59;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--primary);
+
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--primary);
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    position: relative;
+
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(124, 58, 237, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(236, 72, 153, 0.10),
+            transparent 30%
+        );
+}
+
+.hero-content {
+
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero-badge {
+
+    display: inline-flex;
+
+    padding: 8px 15px;
+
+    border-radius: 50px;
+
+    background: var(--purple-light);
+
+    color: var(--primary);
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(3rem, 6vw, 5.3rem);
+
+    line-height: 1.03;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--pink)
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.hero-text > p {
+
+    max-width: 590px;
+
+    color: var(--text);
+
+    font-size: 1.08rem;
+
+    margin-bottom: 32px;
+}
+
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 14px;
+
+    margin-bottom: 40px;
+}
+
+.btn {
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 50px;
+
+    padding: 0 25px;
+
+    border-radius: 13px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        background 0.3s;
+}
+
+.btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+.btn-primary {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    box-shadow:
+        0 10px 25px rgba(124, 58, 237, 0.25);
+}
+
+.btn-primary:hover {
+
+    box-shadow:
+        0 15px 30px rgba(124, 58, 237, 0.35);
+}
+
+.btn-secondary {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    color: var(--dark);
+}
+
+.btn-secondary:hover {
+
+    border-color: var(--primary);
+
+    color: var(--primary);
+}
+
+
+/* ==================================================
+   HERO STATS
+================================================== */
+
+.hero-info {
+
+    display: flex;
+
+    gap: 40px;
+}
+
+.hero-info div {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.hero-info strong {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 1.45rem;
+}
+
+.hero-info span {
+
+    color: #77727f;
+
+    font-size: 0.78rem;
+}
+
+
+/* ==================================================
+   HERO IMAGE
+================================================== */
+
+.hero-image {
+
+    position: relative;
+
+    width: min(100%, 430px);
+
+    margin-left: auto;
+}
+
+.hero-image img {
+
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1.08;
+
+    object-fit: cover;
+
+    border-radius: 35px;
+
+    border: 8px solid white;
+
+    box-shadow:
+        0 30px 70px rgba(61, 34, 96, 0.20);
+}
+
+.image-decoration {
+
+    position: absolute;
+
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    top: 25px;
+    left: 25px;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c4b5fd,
+            #fbcfe8
+        );
+}
+
+.floating-card {
+
+    position: absolute;
+
+    z-index: 3;
+
+    bottom: 30px;
+    left: -35px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px 20px;
+
+    border-radius: 15px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 40px rgba(61, 34, 96, 0.15);
+
+    font-size: 1.15rem;
+}
+
+.floating-card span {
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   SOBRE MI
+================================================== */
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr 1fr;
+
+    gap: 22px;
+}
+
+.about-card {
+
+    padding: 35px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.about-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 25px 60px rgba(61, 34, 96, 0.13);
+}
+
+.about-icon {
+
+    width: 55px;
+    height: 55px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 15px;
+
+    background: #ede9fe;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 23px;
+}
+
+.about-icon.pink {
+
+    background: #fce7f3;
+}
+
+.about-icon.purple {
+
+    background: #e0e7ff;
+}
+
+.about-card h3 {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 1.3rem;
+
+    margin-bottom: 12px;
+}
+
+.about-card p {
+
+    color: var(--text);
+
+    font-size: 0.94rem;
+
+    margin-bottom: 12px;
+}
+
+
+/* ==================================================
+   PROYECTOS
+================================================== */
+
+.projects-section {
+
+    background: #f4f1fb;
+}
+
+.projects-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
 .project-card {
-  flex: 0 0 auto;
-  width: 220px;
-  background: rgba(255,255,255,0.05);
-  border: 2px solid #00eaff;
-  border-radius: 12px;
-  padding: 12px;
-  text-align: center;
-  box-shadow: 0px 0px 12px #00eaff60;
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow:
+        0 15px 40px rgba(61, 34, 96, 0.08);
+
+    transition:
+        transform 0.35s,
+        box-shadow 0.35s;
 }
 
 .project-card:hover {
-  transform: scale(1.06);
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 60px rgba(61, 34, 96, 0.15);
 }
 
-/* IMAGEN DE PROYECTO */
-.project-card img,
-.estrella-preview {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  background-color: white;
-  padding: 10px;
+.project-image {
+
+    position: relative;
+
+    height: 225px;
+
+    overflow: hidden;
+
+    background: #eee9fa;
 }
 
-/* TITULOS Y DESCRIPCIÓN */
-.project-card h3 {
-  margin: 10px 0 5px;
-  color: #00eaff;
-  font-size: 16px;
+.project-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s;
 }
 
-.project-card p {
-  font-size: 14px;
-  color: #fff;
-  text-align: center;
-  flex-grow: 1;
+.project-card:hover .project-image img {
+
+    transform: scale(1.06);
 }
 
-/* BOTONES DE PROYECTO */
-.boton-proyecto {
-  display: inline-block;
-  background: #0077cc;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 10px;
-  font-weight: bold;
-  font-size: 14px;
-  transition: background 0.3s;
+.project-image .estrella-preview {
+
+    object-fit: contain;
+
+    padding: 30px;
 }
 
-.boton-proyecto:hover {
-  background: #0099ff;
+.project-number {
+
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    background: rgba(255,255,255,0.9);
+
+    color: var(--primary);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
 }
 
-/* BOTÓN GENERAL */
-.boton-link {
-  display: inline-block;
-  background: #00aaff;
-  color: white;
-  padding: 10px 18px;
-  margin-top: 10px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
+.project-content {
+
+    padding: 27px;
 }
 
-/* CONTACTO CENTRADO */
-.lista-contacto {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  margin-top: 20px;
+.project-tag {
+
+    display: inline-block;
+
+    color: var(--primary);
+
+    background: #f0ebff;
+
+    border-radius: 50px;
+
+    padding: 5px 10px;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    margin-bottom: 14px;
 }
 
-.lista-contacto li {
-  margin: 10px 0;
+.project-content h3 {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 1.3rem;
+
+    margin-bottom: 10px;
 }
 
-/* CV CENTRADO */
-#cv {
-  text-align: center;
-  margin-top: 20px;
+.project-content p {
+
+    min-height: 72px;
+
+    color: var(--text);
+
+    font-size: 0.9rem;
+
+    margin-bottom: 22px;
 }
 
-.boton-cv {
-  display: inline-block;
-  margin-top: 12px;
-  background: #00aaff;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+.project-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--primary);
+
+    font-size: 0.9rem;
+
+    font-weight: 800;
+
+    transition: gap 0.3s;
 }
 
-.boton-cv:hover {
-  background: #0099ff;
+.project-link:hover {
+
+    gap: 14px;
 }
 
-/* PREVIEW DE LA ESTRELLA */
-.estrella-preview {
-  width: 100%;
-  height: 140px;
-  object-fit: contain;
-  border-radius: 12px;
-  background-color: white;
-  padding: 10px;
+
+/* ==================================================
+   CV
+================================================== */
+
+.cv-section {
+
+    background: white;
 }
 
-@media (max-width: 900px) {
-  .projects-row {
-      justify-content: center;
-      gap: 20px;
-  }
-}
+.cv-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 45px;
+
+    border-radius: 30px;
+
+    color: white;
+
+    background:
+        linear-gradient(
