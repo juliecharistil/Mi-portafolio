@@ -3,100 +3,519 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Julie</title>
+
+    <meta name="description" content="Portafolio de Julie Charistil, estudiante de programación y apasionada por la tecnología.">
+
+    <title>Julie Charistil | Portafolio</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-    <h1>Portafolio Tech de Julie</h1>
-    <nav>
-        <a href="#sobre-mi">Sobre Mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#cv">CV</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-</header>
+    <!-- ================= NAVBAR ================= -->
 
-<!-- SOBRE MI -->
-<section id="sobre-mi">
-    <h2>Sobre mí</h2>
+    <header class="header">
+        <div class="container nav-container">
 
-    <div class="tarjeta-foto">
-        <img src="mi-foto.jpg" alt="Mi foto">
-        <p>Julie Charistil</p>
-    </div>
+            <a href="#inicio" class="logo">
+                Julie<span>.</span>
+            </a>
 
-    <div class="tarjeta-info">
-        <h2>👋 ¡Hola! Soy Julie </h2>
-        <p>18 años</p>
-        <p>Estudiante de Programación</p>
-        <p>
-            ¡Hola! Soy Julie, una persona creativa, curiosa y apasionada por la tecnología.
-            Me encanta aprender cosas nuevas, explorar el mundo digital y mejorar cada día.
-        </p>
-    </div>
-</section>
+            <nav class="nav">
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#cv">CV</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
 
-<!-- PROYECTOS -->
-<section id="proyectos">
-  <h2>Mis Proyectos</h2>
+        </div>
+    </header>
 
-  <div class="projects-row">
 
-    <!-- Proyecto 1 -->
-    <div class="project-card">
-      <img src="https://uploads.scratch.mit.edu/get_image/project/1171616061_480x360.png" alt="Juego Scratch">
-      <h3>Juego de Mariposas 🦋</h3>
-      <p>
-        Un proyecto visual donde las mariposas vuelan libremente por la pantalla.
-      </p>
-      <a class="boton-proyecto" href="https://scratch.mit.edu/projects/1171616061/" target="_blank">Ver Proyecto</a>
-    </div>
+    <main>
 
-    <!-- Proyecto 2 -->
-    <div class="project-card">
-      <img class="estrella-preview" src="https://juliecharistil.github.io/atrapa-estrella/estrella.png" alt="Atrapa la Estrella">
-      <h3>Atrapa la Estrella ✨</h3>
-      <p>Un mini juego para perseguir una estrellita pastel ⭐.</p>
-      <a class="boton-proyecto" href="https://juliecharistil.github.io/atrapa-estrella/" target="_blank">Jugar Ahora</a>
-    </div>
+        <!-- ================= HERO ================= -->
 
-    <!-- Proyecto 3 -->
-    <div class="project-card">
-      <img src="mi-foto.jpg" alt="Quiz Interactivo"> <!-- Temporal -->
-      <h3>Quiz Interactivo</h3>
-      <p>Quiz moderno con animaciones y niveles 📊.</p>
-      <a class="boton-proyecto" href="https://juliecharistil.github.io/quiz_interactivo_app/" target="_blank">Ver Proyecto</a>
-    </div>
+        <section id="inicio" class="hero">
 
-  </div>
-</section>
+            <div class="container hero-content">
 
-<!-- CV -->
-<section id="cv">
-    <h2>Mi Currículum</h2>
-    <p>Haz clic para ver mi CV 👇</p>
+                <div class="hero-text">
 
-    <a class="boton-link" href="cv-Julie.pdf" target="cv-Julie">
-        📄 Ver o Descargar CV
-    </a>
-</section>
+                    <span class="hero-badge">
+                        ✨ Estudiante de Programación
+                    </span>
 
-<!-- CONTACTO -->
-<section id="contacto">
-    <h2>Contacto</h2>
+                    <h1>
+                        Hola, soy <span>Julie</span> 👋
+                    </h1>
 
-    <ul class="lista-contacto">
-        <li>📧 Email: <strong>juliecharistil@gmail.com</strong></li>
-        <li>📘 Facebook: <strong>Lola Charistil</strong></li>
-        <li>📱 Teléfono: <strong>+56 9 2174 2776</strong></li>
-    </ul>
-</section>
+                    <p>
+                        Creo proyectos digitales, juegos y experiencias web
+                        mientras aprendo y desarrollo nuevas habilidades
+                        en el mundo de la tecnología.
+                    </p>
 
-<footer>
-    <p>Pequeños pasos hoy, grandes logros mañana ⚡ | Julie Charistil</p>
-</footer>
+                    <div class="hero-buttons">
+
+                        <a href="#proyectos" class="btn btn-primary">
+                            Ver mis proyectos
+                        </a>
+
+                        <a href="#contacto" class="btn btn-secondary">
+                            Contactarme
+                        </a>
+
+                    </div>
+
+                    <div class="hero-info">
+                        <div>
+                            <strong>18</strong>
+                            <span>Años</span>
+                        </div>
+
+                        <div>
+                            <strong>3+</strong>
+                            <span>Proyectos</span>
+                        </div>
+
+                        <div>
+                            <strong>∞</strong>
+                            <span>Ganas de aprender</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="hero-image">
+
+                    <div class="image-decoration"></div>
+
+                    <img src="mi-foto.jpg" alt="Foto de Julie Charistil">
+
+                    <div class="floating-card">
+                        💻 <span>Creando cosas increíbles</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SOBRE MÍ ================= -->
+
+        <section id="sobre-mi" class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>CONÓCEME</span>
+                    <h2>Sobre mí</h2>
+                    <p>
+                        Un poco sobre quién soy, qué me apasiona
+                        y hacia dónde quiero crecer.
+                    </p>
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-card about-main">
+
+                        <div class="about-icon">
+                            👩‍💻
+                        </div>
+
+                        <h3>Hola, soy Julie</h3>
+
+                        <p>
+                            Soy una persona creativa, curiosa y apasionada
+                            por la tecnología. Actualmente estudio programación
+                            y disfruto creando proyectos que me permitan
+                            aprender algo nuevo.
+                        </p>
+
+                        <p>
+                            Me gusta explorar el mundo digital, experimentar
+                            con diferentes ideas y mejorar mis habilidades
+                            poco a poco.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-card">
+
+                        <div class="about-icon pink">
+                            🎯
+                        </div>
+
+                        <h3>Mi objetivo</h3>
+
+                        <p>
+                            Seguir aprendiendo, desarrollar proyectos
+                            cada vez mejores y crecer profesionalmente
+                            dentro del mundo tecnológico.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-card">
+
+                        <div class="about-icon purple">
+                            💡
+                        </div>
+
+                        <h3>Lo que me inspira</h3>
+
+                        <p>
+                            La creatividad, los nuevos desafíos,
+                            aprender mediante proyectos y transformar
+                            ideas en algo que pueda funcionar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROYECTOS ================= -->
+
+        <section id="proyectos" class="section projects-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>MI TRABAJO</span>
+
+                    <h2>Proyectos destacados</h2>
+
+                    <p>
+                        Algunos de los proyectos que he creado
+                        mientras aprendo programación.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- PROYECTO 1 -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="https://uploads.scratch.mit.edu/get_image/project/1171616061_480x360.png"
+                                alt="Juego de Mariposas"
+                            >
+
+                            <span class="project-number">
+                                01
+                            </span>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-tag">
+                                Scratch
+                            </span>
+
+                            <h3>
+                                Juego de Mariposas 🦋
+                            </h3>
+
+                            <p>
+                                Un proyecto visual e interactivo donde
+                                las mariposas vuelan libremente por
+                                la pantalla.
+                            </p>
+
+                            <a
+                                class="project-link"
+                                href="https://scratch.mit.edu/projects/1171616061/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Ver proyecto
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROYECTO 2 -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                class="estrella-preview"
+                                src="https://juliecharistil.github.io/atrapa-estrella/estrella.png"
+                                alt="Atrapa la Estrella"
+                            >
+
+                            <span class="project-number">
+                                02
+                            </span>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-tag">
+                                HTML · CSS · JavaScript
+                            </span>
+
+                            <h3>
+                                Atrapa la Estrella ✨
+                            </h3>
+
+                            <p>
+                                Un mini juego interactivo donde debes
+                                perseguir y atrapar una estrellita
+                                pastel.
+                            </p>
+
+                            <a
+                                class="project-link"
+                                href="https://juliecharistil.github.io/atrapa-estrella/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Jugar ahora
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROYECTO 3 -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="mi-foto.jpg"
+                                alt="Quiz Interactivo"
+                            >
+
+                            <span class="project-number">
+                                03
+                            </span>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-tag">
+                                Aplicación web
+                            </span>
+
+                            <h3>
+                                Quiz Interactivo 📊
+                            </h3>
+
+                            <p>
+                                Un quiz moderno con preguntas,
+                                niveles y una experiencia interactiva
+                                para poner a prueba tus conocimientos.
+                            </p>
+
+                            <a
+                                class="project-link"
+                                href="https://juliecharistil.github.io/quiz_interactivo_app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Ver proyecto
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CV ================= -->
+
+        <section id="cv" class="section cv-section">
+
+            <div class="container">
+
+                <div class="cv-card">
+
+                    <div class="cv-icon">
+                        📄
+                    </div>
+
+                    <div class="cv-text">
+
+                        <span>MI PERFIL PROFESIONAL</span>
+
+                        <h2>
+                            ¿Quieres conocer más sobre mí?
+                        </h2>
+
+                        <p>
+                            Revisa mi currículum para conocer más
+                            sobre mi formación, habilidades y experiencia.
+                        </p>
+
+                    </div>
+
+                    <a
+                        class="btn btn-white"
+                        href="cv-Julie.pdf"
+                        target="_blank"
+                    >
+                        Ver mi CV →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACTO ================= -->
+
+        <section id="contacto" class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>HABLEMOS</span>
+
+                    <h2>Contacto</h2>
+
+                    <p>
+                        ¿Tienes una idea, proyecto o simplemente quieres
+                        saludar? Puedes encontrarme aquí.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+
+                    <a
+                        href="mailto:juliecharistil@gmail.com"
+                        class="contact-card"
+                    >
+
+                        <div class="contact-icon">
+                            📧
+                        </div>
+
+                        <div>
+                            <span>Email</span>
+                            <strong>
+                                juliecharistil@gmail.com
+                            </strong>
+                        </div>
+
+                    </a>
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon">
+                            📱
+                        </div>
+
+                        <div>
+                            <span>Teléfono</span>
+                            <strong>
+                                +56 9 2174 2776
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon">
+                            📘
+                        </div>
+
+                        <div>
+                            <span>Facebook</span>
+                            <strong>
+                                Lola Charistil
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <a href="#inicio" class="logo">
+                    Julie<span>.</span>
+                </a>
+
+                <p>
+                    Estudiante de programación 💻
+                </p>
+            </div>
+
+            <p>
+                © 2026 Julie Charistil · Hecho con 💜
+            </p>
+
+        </div>
+
+    </footer>
+
 
 </body>
 </html>
